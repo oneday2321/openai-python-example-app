@@ -1,0 +1,6 @@
+run_command: "python3 main.py"
+debug:
+  support: true
+  launch:
+    program: main.py
+    console: integratedTerminal
