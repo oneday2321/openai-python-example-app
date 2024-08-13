@@ -6,16 +6,6 @@ This is an example pet name generator app used in the OpenAI API [quickstart tut
 
 如上，这是一个简单的 OpenAI API 官方应用示例，“给我的宠物取个超级英雄的名字”，Python Flask 框架构建。使用方式是输入一种动物名称后点击生成名称按钮，AI会返回三个超级英雄的名字给你。
 
-特别之处在于这个应用程序调用了 [1024Code平台](https://1024code.com/) 提供的 GPT-3.5 等同 API（通过IDE里动态设置和注入的环境变量 `OPENAI_API_KEY`和 `OPENAI_API_BASE` 来访问该API）
-
-- 每位用户拥有1000次调用次数，用完后可联系运营人员申请更多调用次数。
-- 协作调试或临时访问时，将使用代码空间的所有者的配额。
-- 发布到社区访问时，将使用当前登录用户的配额。
-
-
-参照下方步骤学习、拓展或改造该 AI 应用程序：
-
-
 ## 阅读程序代码
 
 见文件：`app.python`  和 `/templates/index.html`
@@ -62,16 +52,11 @@ def turbo():
 </body>
 ```
 
-## Fork代码空间修改代码
+## 创建并激活虚拟环境
 
-点击代码空间详情页右上角的"Fork 空间"按钮，Fork该空间到自己的工作台后，在文件树新增/删除文件、在编辑器编辑文件。
-
-注意：通过环境变量使用 1024Code 平台生成的 API Key 和请求地址
-
-```python
-app = Flask(__name__)
-openai.api_key = os.getenv("OPENAI_API_KEY")  # 使用环境变量 OPENAI_API_KEY
-openai.api_base = os.getenv("OPENAI_API_BASE")  # 指定请求地址，使用环境变量 OPENAI_API_BASE
+```bash
+$ python -m venv venv
+$ source venv/bin/activate
 ```
 
 ## 安装依赖
